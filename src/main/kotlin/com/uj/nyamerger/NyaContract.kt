@@ -1,0 +1,60 @@
+package com.uj.nyamerger
+
+class NyaContract {
+
+    companion object{
+        const val PIVOT_INPUT_NAME="PIVOT_INPUT_STEP"
+        const val OUTPUT_CONFIGURATION_NAME="CODEC_SELECTION_STEP"
+        const val SAVE_PIVOT_A_TRACKS_NAME="SAVE_PIVOT_AUDIO_STEP"
+        const val SAVE_PIVOT_V_TRACKS_NAME="SAVE_PIVOT_VIDEO_STEP"
+        const val SAVE_PIVOT_S_TRACKS_NAME="SAVE_PIVOT_STITLES_STEP"
+        const val SPECIFY_VIDEO_RESOLUTION_NAME="SPECIFY_VIDEO_SIZE_STEP"
+        const val SPECIFY_VIDEO_CODEC_NAME="SPECIFY_NEW_VIDEO_CODEC_STEP"
+        const val SPECIFY_AUDIO_CODEC_NAME="SPECIFY_NEW_AUDIO_CODEC_STEP"
+        const val COMPILER_STEP_NAME="COMPILER_STEP"
+        const val SPECIFY_OUTPUT_PATH_NAME="OUTPUT_PATH_STEP"
+        const val SPECIFY_PARALLELISM_NAME="OUTPUT_PARALLELISM_STEP"
+        const val PRE_REQUISITES_ASSESSMENT_STEP_NAME="PRE_REQUISITES_ASSESSMENT_STEP"
+        const val FF_MPEG_DIR_SPECIFICATION_NAME="FF_MPEG_DIR_SPECIFICATION"
+
+
+        val supportedVCodecNames:Array<String> = arrayOf("h264","hevc","mpeg4")
+        val supportedACodecNames:Array<String> = arrayOf("flac","aac","mp3")
+
+        const val PROP_FILE="NYA_PROPS.properties"
+
+        const val MULTI_MODE_PROP="MULTI_MODE"
+        const val MULTI_MODE_NUMBER_PROP="MULTI_MODE_NUMBER"
+        const val SAVE_PIVOT_A_TRACKS_PROP="SAVE_PIVOT_A_TRACKS"
+        const val SAVE_PIVOT_V_TRACKS_PROP="SAVE_PIVOT_V_TRACKS"
+        const val SAVE_PIVOT_S_TRACKS_PROP="SAVE_PIVOT_S_TRACKS"
+        const val NEW_VIDEO_RESOLUTION_PROP="NEW_VIDEO_RESOLUTION"
+        const val NEW_A_CODEC_PROP="NEW_A_CODEC"
+        const val NEW_V_CODEC_PROP="NEW_V_CODEC"
+        const val PIVOT_INPUT_PATH_PROP="PIVOT_INPUT_PATH"
+        const val FF_PROBE_PROP="FF_PROBE"
+        const val FF_MPEG_PROP="FF_MPEG"
+        const val OUTPUT_PATH_PROP="OUTPUT_PATH_PROP"
+        const val PARALLELISM_PROP="COMPILE_PARALLELISM"
+        const val PROCESS_REGISTRY_PROP="PROCESS_REGISTRY"
+        const val CONVERSION_DEFERRED_PROP="CONVERSION_DEFERRED"
+        const val CURRENT_CONVERSION_FILES_PROP="CURRENT_CONVERSION_FILES"
+
+        const val VARIABLE_ADDITIONAL_INPUT_CONFIRMATION_STEP_NAME_CONST="ADDITIONAL_INPUT_STEP#"
+        const val VARIABLE_ADDITIONAL_INPUT_PATH_STEP_NAME_CONST="ADDITIONAL_INPUT_PATH_STEP#"
+        const val VARIABLE_ADDITIONAL_INPUT_PATH_PROP_CONST="ADDITIONAL_INPUT_PATH#"
+
+        fun constructAdditionalInputPathStepName(number:Int):String{
+            return VARIABLE_ADDITIONAL_INPUT_CONFIRMATION_STEP_NAME_CONST+number
+        }
+        fun constructAdditionalInputPathPropName(number:Int):String{
+            return VARIABLE_ADDITIONAL_INPUT_PATH_PROP_CONST+number
+        }
+
+        const val PROCESSED_SUFFIX="-PROCESSED"
+
+
+
+    }
+
+}
